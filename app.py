@@ -29,6 +29,7 @@ if uploaded_file is not None:
     prediction = model.predict(img_array)[0][0]
 
     if prediction > 0.5:
-        st.error("⚠️ Pneumonia Detected")
+        st.error("✅ Normal (No Pneumonia)")
     else:
-        st.success("✅ Normal (No Pneumonia)")
+
+        st.success("⚠️ Pneumonia Detected")
